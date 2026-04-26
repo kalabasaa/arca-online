@@ -5,14 +5,14 @@ require_once __DIR__ . '/../../server/utils/sanitize.php';
 require_once __DIR__ . '/../../server/queries/admin_queries.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../auth/login.html");
+    header("Location: ../auth/login.php");
     exit();
 }
 
 $acting_id = sanitize_int($_SESSION['user_id']);
 if ($acting_id === false) {
     session_destroy();
-    header("Location: ../auth/login.html");
+    header("Location: ../auth/login.php");
     exit();
 }
 
@@ -23,16 +23,12 @@ $stmt->execute();
 $actor = $stmt->get_result()->fetch_assoc();
 $stmt->close();
 
-<<<<<<< HEAD
 
 $actor = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : null;
  
 if (!$actor || $actor !== 'admin_renier') {
-   header("Location: ../pages/dashboard.php");
-=======
-if (!$actor || $actor['user_name'] !== 'admin_renier') {
     header("Location: ../pages/dashboard.php");
->>>>>>> upstream/main
+
     exit();
 }
 $sort  = sanitize_text($_GET['sort'] ?? 'name');
@@ -45,7 +41,7 @@ $users = get_all_users($conn, $sort);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arca Admin</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/logo.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         body { background: #0A0A16; color: #fff; min-height: 100vh; }
@@ -110,10 +106,10 @@ $users = get_all_users($conn, $sort);
 <body>
 
 <header>
-    <div class="logo"><img src="../assets/img/arca.png" alt="Arca Logo"></div>
+    <div class="logo"><img src="/assets/img/arca.png" alt="Arca Logo"></div>
     <nav></nav>
     <div class="logout">
-        <form action="../index.php" method="post">
+        <form action="../../server/auth/logout.php" method="post">
             <button type="submit">Logout</button>
         </form>
     </div>

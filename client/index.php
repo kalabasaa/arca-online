@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arca — Inventory & Sales Platform</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <style>
@@ -783,7 +783,7 @@
     </p>
 
     <div class="hero-actions">
-        <a href="auth/register.html" class="btn-primary">
+        <a href="auth/register.php" class="btn-primary">
             Get started free
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
