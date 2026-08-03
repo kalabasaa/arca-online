@@ -1,4 +1,5 @@
-<?php
-header("Location: client/index.php");
+<?php 
+header('location client/index.php');
 exit();
+
 ?>

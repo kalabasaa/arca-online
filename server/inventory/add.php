@@ -39,7 +39,12 @@ if ($cost === false || $price === false) {
 }
 
 
-$allowed_categories = ['food', 'drinks', 'canned', 'noodles', 'snacks', 'cleaning', 'others'];
+$allowed_categories = [
+    'rice_grains', 'canned_goods', 'noodles_pasta', 'snacks', 'bread_bakery',
+    'condiments', 'cooking_oil', 'soft_drinks', 'water', 'coffee_tea',
+    'powdered_drinks', 'cleaning', 'laundry', 'dishwashing', 'hygiene',
+    'hair_care', 'skin_care', 'school', 'medicine', 'load_eload', 'others'
+];
 if (!in_array($category, $allowed_categories, true)) {
     redirect_with_msg('../../client/pages/dashboard.php', 'Invalid category.');
 }

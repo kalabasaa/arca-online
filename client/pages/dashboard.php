@@ -96,15 +96,39 @@ $items = get_all_items($conn, $user_id);
     <form action="../../server/inventory/add.php" autocomplete="off" method="post">
         <input type="text"   name="item"     placeholder="Item name"     required>
         <select name="category" required>
-            <option value="" disabled selected hidden>Select category</option>
-            <option value="food">Food</option>
-            <option value="drinks">Drinks</option>
-            <option value="canned">Canned</option>
-            <option value="noodles">Noodles</option>
-            <option value="snacks">Snacks</option>
-            <option value="cleaning">Cleaning</option>
-            <option value="others">Others</option>
-        </select>
+    <option value="" disabled selected hidden>Select category</option>
+
+    <!-- Food & Drinks -->
+    <option value="rice_grains">Rice & Grains</option>
+    <option value="canned_goods">Canned Goods</option>
+    <option value="noodles_pasta">Noodles & Pasta</option>
+    <option value="snacks">Snacks & Chips</option>
+    <option value="bread_bakery">Bread & Bakery</option>
+    <option value="condiments">Condiments & Sauces</option>
+    <option value="cooking_oil">Cooking Oil & Vinegar</option>
+
+    <!-- Beverages -->
+    <option value="soft_drinks">Soft Drinks</option>
+    <option value="water">Water & Juice</option>
+    <option value="coffee_tea">Coffee & Tea</option>
+    <option value="powdered_drinks">Powdered Drinks</option>
+
+    <!-- Household -->
+    <option value="cleaning">Cleaning Supplies</option>
+    <option value="laundry">Laundry Products</option>
+    <option value="dishwashing">Dishwashing</option>
+
+    <!-- Personal Care -->
+    <option value="hygiene">Personal Hygiene</option>
+    <option value="hair_care">Hair Care</option>
+    <option value="skin_care">Skin Care</option>
+
+    <!-- Other -->
+    <option value="school">School Supplies</option>
+    <option value="medicine">Medicine & First Aid</option>
+    <option value="load_eload">Load & E-load</option>
+    <option value="others">Others</option>
+</select>
         <input type="number" name="quantity" placeholder="Item quantity" min="0" required>
         <input type="number" name="cost"     placeholder="Item cost"     min="0" step="0.01" required>
         <input type="number" name="price"    placeholder="Item price"    min="0" step="0.01" required>
