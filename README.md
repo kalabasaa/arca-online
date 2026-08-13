@@ -35,6 +35,8 @@ This project also served as my learning experience in backend development, datab
 
 I created Arca to explore how software can solve real-world problems, especially for small businesses.
 
+I named it arca cuz short for archive with the idea of storing something.
+
 The main goals of this project were:
 
 * Create a simple inventory management solution.
