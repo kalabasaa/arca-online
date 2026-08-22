@@ -150,41 +150,6 @@ This project helped me understand how frontend interfaces communicate with backe
 
 ---
 
-# Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/arca.git
-
-cd arca
-```
-
-Move the project into your local server directory:
-
-```
-htdocs/arca
-```
-
-Create a MySQL database and import the provided SQL file.
-
-Configure your database connection:
-
-```php
-Database Host: localhost
-Database Name: arca
-Username: root
-Password:
-```
-
-Run the project:
-
-```
-http://localhost/arca
-```
-
----
-
 # Database Structure
 
 Core database modules:
