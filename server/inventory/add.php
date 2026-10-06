@@ -21,7 +21,6 @@ if (!isset($_POST['add'])) {
     exit();
 }
 
-
 $name     = sanitize_text($_POST['item']     ?? '');
 $category = sanitize_text($_POST['category'] ?? '');
 $quantity = sanitize_int($_POST['quantity']  ?? '');
@@ -38,7 +37,6 @@ if ($cost === false || $price === false) {
     redirect_with_msg('../../client/pages/dashboard.php', 'Invalid cost or price.');
 }
 
-
 $allowed_categories = [
     'rice_grains', 'canned_goods', 'noodles_pasta', 'snacks', 'bread_bakery',
     'condiments', 'cooking_oil', 'soft_drinks', 'water', 'coffee_tea',
@@ -48,7 +46,6 @@ $allowed_categories = [
 if (!in_array($category, $allowed_categories, true)) {
     redirect_with_msg('../../client/pages/dashboard.php', 'Invalid category.');
 }
-
 
 $stmt = $conn->prepare("
     INSERT INTO items (user_id_fk, product_name, product_category, product_quantity, product_cost, product_price)
