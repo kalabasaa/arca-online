@@ -200,11 +200,10 @@ arca/
 * [x] MySQL Database Integration
 * [x] Basic Inventory Tracking
 * [x] Structured Folder Architecture
-* [ ] User Authentication
+* [x] User Authentication
 * [ ] Stock Notifications
-* [ ] Sales Tracking
-* [ ] Reports and Analytics
-* [ ] Mobile Application
+* [x] Sales Tracking
+* [x] Reports and Analytics
 
 ---
 
